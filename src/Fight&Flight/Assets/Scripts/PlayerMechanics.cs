@@ -11,6 +11,9 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField]
     private ProjectileManager ProjectileManager;
 
+    [SerializeField]
+    private WeaponSpawner WeaponSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,15 @@ public class PlayerMechanics : MonoBehaviour
             body.AddForce(new Vector2(0, 30), ForceMode2D.Force);
         }
         else anim.SetBool("flying", false);
+    }
+    
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "Weapon"){
+            // TODO: Change the weapon and the shooting behaviour
+            Debug.Log("Picked up weapon " + other.gameObject.name);
+            
+            Destroy(other.gameObject);
+        }
     }
 
     void OnFly()
