@@ -39,6 +39,11 @@ public class PlayerMechanics : MonoBehaviour
             
             Destroy(other.gameObject);
         }
+        if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Obstacle"){
+            // TODO: Transition to game over screen
+            Debug.Log("Game Over");
+            Time.timeScale = 0;
+        }
     }
 
     void OnFly()

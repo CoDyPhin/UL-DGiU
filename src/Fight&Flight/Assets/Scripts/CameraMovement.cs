@@ -18,4 +18,14 @@ public class CameraMovement : MonoBehaviour
         transform.Translate(Vector3.left*speed*Time.deltaTime);
         if (transform.position.x < -17.8) transform.position = startPos;
     }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
 }
