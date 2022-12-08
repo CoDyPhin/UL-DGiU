@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "Fire",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "550d32bb-908e-4d5c-998a-52351b65817c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Fly",
