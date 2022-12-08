@@ -776,6 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3976174857230936464, guid: 5e24acf0035e27648891caf83e38759a, type: 3}
   projectileHolder: {fileID: 795891541}
+  characterAnimator: {fileID: 192218182}
 --- !u!4 &1095889499
 Transform:
   m_ObjectHideFlags: 0
