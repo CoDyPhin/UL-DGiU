@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMechanics : MonoBehaviour
 {
@@ -53,8 +54,10 @@ public class PlayerMechanics : MonoBehaviour
         }
         if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Obstacle"){
             // TODO: Transition to game over screen
+
             Debug.Log("Game Over");
-            Time.timeScale = 0;
+            SceneManager.LoadScene("GameOver");
+            // Time.timeScale = 0;
         }
     }
 
